@@ -7,7 +7,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const app = express();
-const port = process.env.PORT || 3608;
+const port = process.env.PORT || 3609;
 
 // Database configuration
 const pool = new Pool({

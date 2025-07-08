@@ -4,7 +4,7 @@ services:
   browsing-jobs:
     build: ./browsing-jobs
     ports:
-      - "8610:80"
+      - "8612:80"
     depends_on:
       - backend
 
@@ -12,16 +12,16 @@ services:
     build:
       context: ./hr-side posting
     ports:
-      - "8611:80"
+      - "8613:80"
     depends_on:
       - backend
 
   backend:
     build: ./Backend
     ports:
-      - "3608:3608"
+      - "3609:3609"
     environment:
-      - PORT=3608
+      - PORT=3609
       - DB_USER=postgres
       - DB_PASSWORD=admin321
       - DB_NAME=job_portal_db
